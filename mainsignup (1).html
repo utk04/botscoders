@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coal Stock Management</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #222;
+            margin: 0;
+            padding: 6px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+ 
+        }
+
+        .container {
+            max-width: 400px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            margin-top: 20px;
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 10px;
+            color: #555;
+        }
+
+        input[type="text"],
+        input[type="password"],
+        select {
+            width: 100%;
+            padding: 6px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.5s;
+            font-size: 18px;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        .container select,
+        .container input[type="text"],
+        .container input[type="password"] {
+            margin-top: 10px;
+        }
+
+        .container select {
+            appearance: none;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            background: url('https://cdn.jsdelivr.net/gh/daugilas/selects/images/arrow.png') no-repeat right center / 12px;
+            padding-right: 30px;
+        }
+
+        .container select::-ms-expand {
+            display: none;
+        }
+
+        .container {
+            border: 2px solid #007BFF;
+        }
+
+        .container:hover {
+            border: 2px solid #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Welcome to Coal Stock Management</h2>
+        <form action="your_login_process.php" method="POST">
+            <div class="form-group">
+                <label for="userType">Choose User Type:</label>
+                <select name="userType" id="userType">
+                    <option value="coalMineOperator">Coal Mine Operator 🏭</option>
+                    <option value="consumer">Consumer 👤</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="name">Name of organisation:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="state">State:</label>
+                <input type="text" id="state" name="state" required>
+            </div>
+            <div class="form-group">
+                <label for="district">district:</label>
+                <input type="text" id="district" name="district" required>
+            </div>
+            <div class="form-group">
+                <label for="year">year of registry:</label>
+                <input type="text" id="year" name="year" required>
+            </div>
+            <div class="form-group">
+                <label for="license">License Number:</label>
+                <input type="number" id="license" name="license" required>
+            </div>
+            <div class="form-group">
+                <label for="contact">Contact Number:</label>
+                <input type="number" id="contact" name="contact" required>
+            </div>
+            <div class="form-group">
+                <label for="userId">User ID 🆔:</label>
+                <input type="text" id="userId" name="userId" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password 🔐:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <button type="submit"><a href="2.html">Sign In</a></button>
+        </form>
+    </div>
+</body>
+</html>

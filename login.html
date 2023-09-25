@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Railway Siding Management</title>
+    <style>
+        /* Reset some default browser styles */
+        body, h2, form, label, input, button {
+            margin: 0;
+            padding: 6px;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('background.jpg'); /* Add your background image URL here */
+            background-size: cover;
+            background-position: center;
+            animation: backgroundAnimation 20s linear infinite alternate;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        @keyframes backgroundAnimation {
+            0% {
+                background-color: #222;
+            }
+            100% {
+                background-color: #222;
+            }
+        }
+
+        .login-container {
+            background-color: #ccc; /* Slightly transparent background color */
+            border: 3px solid blue;
+            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            border-radius: 5px;
+            width: 300px;
+            text-align: center;
+            display: inline-block;
+            position: absolute;
+            top: 150px;
+        }
+
+        .login-form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+            color: black;
+        }
+
+        .input-group {
+            margin: 10px 0;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: white; /* Label text color */
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid balck;
+            border-radius: 5px;
+        }
+
+        .login-button {
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .login-button:hover {
+            background-color: #0056b3;
+        }
+
+        .icon {
+            font-size: 24px;
+            margin-right: 10px;
+            color: black;
+        }
+        .first{
+            display: inline-block;
+            position: absolute;
+            top: 50px;
+            font-size: 30px;
+            color: aliceblue;
+            padding: auto;
+            margin-bottom: 10px ;
+            padding-bottom: 20px;
+            transition: transform 20s;
+            text-align: center;
+        }
+        .first:hover{
+            
+            transform: scale(2.03);
+        }
+        
+        .signup{
+            color: black;
+        }
+        .signup:hover{
+            color: black;
+        }
+        .signup:visited{
+            color: #007BFF;
+        }
+        input[type="text"],
+        input[type="password"],
+        select {
+            width: 100%;
+            padding: 6px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+    </style>
+</head>
+<body>
+    <strong class="first">WELCOME TO <STRONG style="color: #58c411;">CMRAS</STRONG></strong>
+    <p class="first" style="color: rgb(174, 247, 247);">The Coal Management and Rail Allocation System</p>
+    <div class="login-container">
+
+        <form class="login-form" action="process-login.php" method="POST">
+            <h2><span class="icon"></span> Login</h2> <!-- Changed emoji to a different one -->
+            <div class="input-group">
+                <label for="username"><span class="icon">&#128100;</span> Username:</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <form id="password-form">
+                <div class="input-group">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" required>
+                    <span class="toggle-password" onclick="togglePasswordVisibility()"></span>
+                </div>
+            </form>
+            <button type="submit" class="login-button"><a href="2.html">login</a></button>
+            <p><a href="#" class="forgot">forgot password?</a></p>
+        </form>
+        <div><strong class="signup"><a href="mainsignup.html">don't have account?</strong></div>
+    </div>
+</body>
+</html>

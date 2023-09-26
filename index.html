@@ -13,7 +13,7 @@
         }
 
         header.all {
-            background-color: #211f24;
+            background-color: #6a23d4;
             border-radius: 30px;
             text-align: center;
             padding: 20px;
@@ -26,18 +26,19 @@
             margin-top: 10px;
             color: white;
             white-space: pre-line;
+            word-spacing: 2px;
         }
 
         .img1 {
             position: absolute;
             left: 20px;
-            top: 10px;
+            top: 25px;
             width: 100px;
             height: auto;
         }
 
         .navbar {
-            background-color: #211f24;
+            background-color: #6a23d4;
             border-radius: 30px;
             overflow: hidden;
         }
@@ -57,15 +58,11 @@
             text-decoration: none;
             color: white;
             padding: 10px 20px;
-            transition: color 0.3s;
-            transition: transform 1s;
         }
         
         
 
-        .navbar:hover {
-            transform: scale(1.03);
-        }
+
 
         .navbar li a:hover {
             color: rgb(10, 235, 205);
@@ -105,19 +102,24 @@
         }
 
         .hero {
-            background-image: url('hero-image.jpg');
+            height: 300px;
+            margin: 10px;
+            padding: 0px 10px;
+            background-image: url('https://coal.nic.in/sites/default/files/2023-09/swachhata-19.jpg');
+            box-shadow: 1px 2px 10px whitesmoke;
+            animation: pulse 20s infinite linear;
             background-size: cover;
             background-position: center;
             text-align: center;
-            padding: 50px 0;
+        }
+        @Keyframes pulse {
+            0%{background-image: url('https://coal.nic.in/sites/default/files/2023-09/swachhata-19.jpg'); }
+            25%{background-image: url('https://www.carloadexpress.com/wp-content/uploads/2014/05/Bullskin-coal-loading.jpg') ;}
+            50%{background-image: url('https://front.page/images/6ddff6a4-bd13-4c5a-b3f8-2f5be51dc107_medium.jpg') ; }
+            75%{background-image: url('https://miro.medium.com/max/841/1*P8XheIsXKLv8GaEMcg1LBA.jpeg') ; }
         }
 
-        .hero h2 {
-            font-size: 48px;
-            color: #b01d4e;
-            margin-bottom: 20px;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-        }
+
 
         .hero p {
             font-size: 20px;
@@ -143,7 +145,9 @@
         }
 
         .container {
-            margin: auto;
+            margin-top: 50px;
+            margin-left: auto;
+            margin-right: auto;
             width: 90%;
             display: flex;
             flex-wrap: wrap;
@@ -247,8 +251,7 @@
     
 </header>
 <section class="hero">
-    <h2>Details of Mining Sides</h2>
-    <a href="#" class="btn">Click Here</a>
+
 </section>
 
 <div class="container">

@@ -13,7 +13,7 @@
         }
 
         header.all {
-            background-color: #211f24;
+            background-color: #6a23d4;
             border-radius: 30px;
             text-align: center;
             padding: 20px;
@@ -25,18 +25,20 @@
             display: inline-block;
             margin-top: 10px;
             color: white;
+            white-space: pre-line;
+            word-spacing: 2px;
         }
 
         .img1 {
             position: absolute;
             left: 20px;
-            top: 10px;
+            top: 25px;
             width: 100px;
             height: auto;
         }
 
         .navbar {
-            background-color: #211f24;
+            background-color: #6a23d4;
             border-radius: 30px;
             overflow: hidden;
         }
@@ -56,15 +58,11 @@
             text-decoration: none;
             color: white;
             padding: 10px 20px;
-            transition: color 0.3s;
-            transition: transform 1s;
         }
         
         
 
-        .navbar:hover {
-            transform: scale(1.03);
-        }
+
 
         .navbar li a:hover {
             color: rgb(10, 235, 205);
@@ -93,6 +91,9 @@
             text-decoration: none;
             transition: background-color 0.9s;
             cursor: pointer;
+            position: absolute;
+            right: 15px;
+            top: 45px;
         }
 
         .register:hover {
@@ -101,19 +102,24 @@
         }
 
         .hero {
-            background-image: url('hero-image.jpg');
+            height: 300px;
+            margin: 10px;
+            padding: 0px 10px;
+            background-image: url('https://coal.nic.in/sites/default/files/2023-09/swachhata-19.jpg');
+            box-shadow: 1px 2px 10px whitesmoke;
+            animation: slides 30s infinite linear;
             background-size: cover;
             background-position: center;
             text-align: center;
-            padding: 50px 0;
+        }
+        @Keyframes slides {
+            0%{background-image: url('https://coal.nic.in/sites/default/files/2023-09/swachhata-19.jpg'); }
+            28%{background-image: url('https://www.carloadexpress.com/wp-content/uploads/2014/05/Bullskin-coal-loading.jpg') ;}
+            55%{background-image: url('https://front.page/images/6ddff6a4-bd13-4c5a-b3f8-2f5be51dc107_medium.jpg') ; }
+            80%{background-image: url('https://miro.medium.com/max/841/1*P8XheIsXKLv8GaEMcg1LBA.jpeg') ; }
         }
 
-        .hero h2 {
-            font-size: 48px;
-            color: #b01d4e;
-            margin-bottom: 20px;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-        }
+
 
         .hero p {
             font-size: 20px;
@@ -139,7 +145,9 @@
         }
 
         .container {
-            margin: auto;
+            margin-top: 50px;
+            margin-left: auto;
+            margin-right: auto;
             width: 90%;
             display: flex;
             flex-wrap: wrap;
@@ -225,8 +233,8 @@
 <header class="all">
     <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Emblem_of_India.svg/1200px-Emblem_of_India.svg.png" class="img1">
     <strong class="first">
-           कोयला मंत्रालय
-             Ministry of Coal
+        C.M.R.A
+        Coal Management And Rail Allocation System
     </strong>
     <nav class="navbar">
         <ul>
@@ -234,18 +242,16 @@
             <li><a href="#">About</a></li>
             <li><a href="#">Services</a></li>
             <li><a href="#">Contact us</a></li>
-            <div class="search">
+            <li style="color: #b01d4e;"><a href="login.html">Log Out</a></li>
+            <div class="search"> 
                 <input type="text" name="search" id="search" placeholder="Search this website">
             </div>
         </ul>
     </nav>
     
-    <button class="register"><a href="mainsignup.html">Log Out</a></button>
-
 </header>
 <section class="hero">
-    <h2>Details of Mining Sides</h2>
-    <a href="#" class="btn">Click Here</a>
+
 </section>
 
 <div class="container">
@@ -262,7 +268,7 @@
     <div class="box">
         <h4 class="consumer">Demand and Record of Consumption</h4>
         <p>Details for the consumption and required material to different consumers are recorded here.</p>
-        <button class="update"><a href="#">View/Update</a></button>
+        <button class="update"><a href="file:///C:/Users/Acer/Desktop/Generation-of-Thermal-Power-from-Raw-Coal-and-Coal-Consumption-during-last-ten-years.pdf">View/Update</a></button>
     </div>
 </div>
 <section>

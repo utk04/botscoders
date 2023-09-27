@@ -3,7 +3,143 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coal Stock Managem<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Coal Stock Management</title>
+    <style>
+        /* Reset some default styles */
+        body, h1, h2, p {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Define basic styling for the page */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+        }
+
+        header {
+            background-color:rgb(87, 163, 138);
+            color: white;
+            text-align: center;
+            padding: 1rem;
+        }
+
+        nav {
+            background-color: rgb(87, 163, 138);
+            color: white;
+            text-align: center;
+            padding: 0.5rem;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 1rem;
+        }
+
+        main {
+            max-width: 800px;
+            margin: 1rem auto;
+            padding: 1rem;
+            background-color: rgb(87, 163, 138);
+        }
+
+        section {
+            margin-bottom: 1.5rem;
+        }
+
+        h2 {
+            background-color: rgb(87, 163, 138);
+            color: white;
+            padding: 0.5rem;
+        }
+
+        footer {
+            text-align: center;
+            background-color: rgb(87, 163, 138);
+            color: white;
+            padding: 0.5rem;
+            position: fixed;
+            bottom: 0px;
+            left: 0px;
+            width: 100%;
+        }
+        .img2{
+            position: absolute;
+            top: 300px;
+            left: 800px;
+            height: 100%;
+
+        }
+        #notifications{
+            margin: auto;
+            display: inline-block;
+            position: absolute;
+            left: 100px;
+            top: 300px;
+            width: 80%;
+
+        }
+        table th, table td {
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        /* Add more specific styles as needed for your content */
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Rail Monitoring and Schedulation</h1>
+    </header>
+    <nav>
+        <!-- Navigation menu, links, or buttons -->
+    </nav>
+    <main>
+        <!-- Main content area -->
+        <section id="coalStock">
+            <h2>All The Trains Data Are Given Below</h2>
+        </section>
+        <section class="img2">
+            <strong>Here's Some Cluster Of Coal Mines</strong>
+            <img src="data:image/jpeg;base64,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">
+        </section>
+        <section id="notifications">
+            <table class="table">
+                <tr>
+                    <th>Rail Rakes Number</th>
+                    <th>Last Station</th>
+                    <th>Current Status</th>
+                </tr>
+                <tr>
+                    <td><strong>12756</a></strong></td>
+                    <td>barauni thermal powerplant</td>
+                    <td>departured to patna powerplant</td>
+                </tr>
+                <tr>
+                    <td><strong>15682</a></strong></td>
+                    <td>kahalgaon</td>
+                    <td>not assigned</td>
+                </tr>
+                <tr>
+                    <td><strong>18376</strong></td>
+                    <td>patna station</td>
+                    <td >assigned kanti powerplant</td>
+                </tr>
+                </table>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2023 Coal Stock Management</p>
+    </footer>
+</body>
+</html>
+ent</title>
     <style>
         /* Reset some default styles */
         body, h1, h2, p {

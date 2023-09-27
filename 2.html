@@ -3,17 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Protocol</title>
+    <title>C.M.R.A icon</title>
+    <link rel="icon" href="./ic.jpeg" type="img/x-icon">
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
             background-color: #f0f0f0;
+            
         }
 
         header.all {
-            background-color: #6a23d4;
+            background: linear-gradient(to right , #ff2500 , #ff6600);
             border-radius: 30px;
             text-align: center;
             padding: 20px;
@@ -38,7 +40,7 @@
         }
 
         .navbar {
-            background-color: #6a23d4;
+            background: linear-gradient(to right , #ff2500 , #ff6600);
             border-radius: 30px;
             overflow: hidden;
         }
@@ -145,19 +147,41 @@
         }
 
         .container {
-            margin-top: 50px;
+            margin-top: 10px;
             margin-left: auto;
             margin-right: auto;
-            width: 90%;
+            margin-bottom: 10px;
+            width: 100%;
             display: flex;
             flex-wrap: wrap;
             justify-content: space-between;
+            position: relative;
+            z-index: 1;
+        }
+        .container::before {
+    content: "";
+    background-image: url('https://wallpapercave.com/wp/wp5469447.jpg'); /* Your background image URL */
+    background-size: cover;
+    background-position: center;
+    opacity: 1.2; /* Adjust the opacity to your liking */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1; /* Place the background behind the boxes and table */
+    transition: transform infinte;
+    width: 100%;
+    height: 400px;
+}
+        .container::before :hover{
+            transform: scale(1.05);
         }
 
         .box {
-            border: 4px solid black;
-            background-color: #ddd;
-            margin: 10px;
+         /*   border: 4px solid rgb(255, 7, 238); */
+            background-color: #ec5c04;
+            margin:auto;
             padding: 20px;
             width: 30%;
             box-sizing: border-box;
@@ -165,6 +189,13 @@
             border-radius: 10px;
             text-align: center;
             transition: transform 0.9s;
+            position: relative; /* Add this to make sure the background is contained within the box */
+            top: 50px;
+            opacity: 0.78;
+            height: 300px;
+            box-shadow: 0 0 10px;
+            z-index: 1;
+
         }
 
         .box:hover {
@@ -177,6 +208,8 @@
             text-align: center;
             padding: 20px 0;
             font-size: 14px;
+            position: relative;
+            top: 90px;
         }
 
         .tableFull {
@@ -185,7 +218,7 @@
             font-size: 20px;
             background-color: white;
             border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+   
         }
 
         table {
@@ -193,6 +226,8 @@
             border-collapse: collapse;
             text-align: center;
             transition: transform 0.9s;
+            position: relative;
+            top: 90px;
         }
         .box:hover {
             transform: scale(1.05);
@@ -201,6 +236,7 @@
         table th, table td {
             padding: 10px;
             border-bottom: 1px solid #ddd;
+            
         }
 
         .reserve {
@@ -211,6 +247,8 @@
         .tableFull b {
             font-size: 25px;
             color: #333;
+            position: relative;
+            top: 90px;
         }
 
         .footer-links {
@@ -227,6 +265,30 @@
             text-decoration: none;
             margin: 0 10px;
         }
+        .heading{
+            color: #070707;
+
+        }
+        .headingup{
+            position: relative;
+            top: 30px;
+        }
+        .update{
+            position: relative;
+            top: 30px; 
+        }
+        .footerfull{
+            position: relative;
+            top: 150px;
+        }
+        #tablediv{
+            position: relative;
+            top: 90px;
+        }
+        .imgcoal{
+            width: 25%;
+        }
+
     </style>
 </head>
 <body>
@@ -253,25 +315,30 @@
 <section class="hero">
 
 </section>
-
+<section class="mostimp">
 <div class="container">
-    <div class="box">
+    <div class="box" id="box1">
+        <img src="./coal mines.jpeg" class="imgcoal">
         <h4 class="heading">Coal Sliding Updation</h4>
-        <p>Coal slides are requested to update the amount of coal you mined.</p>
+        
+        <p class="headingup">Coal slides are requested to update the amount of coal you mined.</p>
         <button class="update"><a href="hackathon5.html">View/Update</a></button>
     </div>
     <div class="box">
+        <img src="./railway.jpeg" class="imgcoal">
         <h4 class="heading">Monitoring of Railways</h4>
-        <p>All rail rakes updation are available here.</p>
+        <p class="headingup">All rail rakes updation are available here.</p>
         <button class="update"><a href="hackathon2.html">View</a></button>
     </div>
     <div class="box">
-        <h4 class="consumer">Demand and Record of Consumption</h4>
-        <p>Details for the consumption and required material to different consumers are recorded here.</p>
+        <img src="./industry.jpeg" class="imgcoal">
+        <h4 class="heading">Demand and Record of Consumption</h4>
+        <p class="headingup">Details for the consumption and required material to different consumers are recorded here.</p>
         <button class="update"><a href="file:///C:/Users/Acer/Desktop/Generation-of-Thermal-Power-from-Raw-Coal-and-Coal-Consumption-during-last-ten-years.pdf">View/Update</a></button>
     </div>
+    
 </div>
-<section>
+<section id="tablediv">
     <div class="tableFull">
         <b>Here's some highlights on records of coal</b>
         <table class="table">
@@ -318,7 +385,7 @@
         </table>
     </div>
 </section>
-<footer>
+<footer class="footerfull">
     <div class="footer-links">
         <a href="#">Contact Us</a>
         <a href="#">About Us</a>

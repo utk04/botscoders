@@ -8,8 +8,8 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
+            margin: 0px 0px;
+            padding: 0px 0px;
             background-color: #f0f0f0;
             
         }
@@ -32,7 +32,7 @@
         }
 
         .img1 {
-            position: absolute;
+            float: left;
             left: 20px;
             top: 25px;
             width: 100px;
@@ -62,10 +62,6 @@
             padding: 10px 20px;
         }
         
-        
-
-
-
         .navbar li a:hover {
             color: rgb(10, 235, 205);
         }
@@ -114,7 +110,7 @@
             background-position: center;
             text-align: center;
         }
-        @Keyframes slides {
+        @keyframes slides {
             0%{background-image: url('https://coal.nic.in/sites/default/files/2023-09/swachhata-19.jpg'); }
             28%{background-image: url('https://www.carloadexpress.com/wp-content/uploads/2014/05/Bullskin-coal-loading.jpg') ;}
             55%{background-image: url('https://front.page/images/6ddff6a4-bd13-4c5a-b3f8-2f5be51dc107_medium.jpg') ; }
@@ -161,7 +157,7 @@
         .container::before {
     content: "";
     background-image: url('https://wallpapercave.com/wp/wp5469447.jpg'); /* Your background image URL */
-    background-size: cover;
+    background-size: 100%;
     background-position: center;
     opacity: 1.2; /* Adjust the opacity to your liking */
     position: absolute;
@@ -193,8 +189,11 @@
             top: 50px;
             opacity: 0.78;
             height: 300px;
-            box-shadow: 0 0 10px;
+            box-shadow: 8px 10px 8px rgb(203, 155, 52);
             z-index: 1;
+            justify-content: center;
+            overflow: scroll;
+            
 
         }
 
@@ -289,6 +288,21 @@
             width: 25%;
         }
 
+        /* @media(max-width: 400px){
+            .box{
+                width: 80%;
+                margin: 20px;
+            }
+            .container{
+                background-size: auto 1000px;
+            }
+        }
+        @media(max-width: 800px) and (min-width:400px){
+            .box{
+                width: 40%;
+                margin: 20px;
+            }
+        } */
     </style>
 </head>
 <body>
@@ -296,7 +310,7 @@
     <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Emblem_of_India.svg/1200px-Emblem_of_India.svg.png" class="img1">
     <strong class="first">
         C.M.R.A
-        Coal Monitoring And Rail Allocation System
+        Coal Management And Rail Allocation System
     </strong>
     <nav class="navbar">
         <ul>
@@ -313,24 +327,24 @@
     
 </header>
 <section class="hero">
-
+    
 </section>
 <section class="mostimp">
 <div class="container">
     <div class="box" id="box1">
         <img src="./coal mines.jpeg" class="imgcoal">
-        <h4 class="heading">Coal Siding Updation</h4>
+        <h4 class="heading">Coal Sliding Updation</h4>
         
-        <p class="headingup">Coal sides are requested to update the amount of coal you mined.</p>
+        <p class="headingup">Coal slides are requested to update the amount of coal you mined.</p>
         <button class="update"><a href="hackathon5.html">View/Update</a></button>
     </div>
-    <div class="box">
+    <div class="box" id="box2">
         <img src="./railway.jpeg" class="imgcoal">
         <h4 class="heading">Monitoring of Railways</h4>
         <p class="headingup">All rail rakes updation are available here.</p>
         <button class="update"><a href="hackathon2.html">View</a></button>
     </div>
-    <div class="box">
+    <div class="box" id="box2">
         <img src="./industry.jpeg" class="imgcoal">
         <h4 class="heading">Demand and Record of Consumption</h4>
         <p class="headingup">Details for the consumption and required material to different consumers are recorded here.</p>
